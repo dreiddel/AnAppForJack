@@ -17,7 +17,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <EditText
-        android:id="@+id/lgUsername"
+        android:id="@+id/etUsername"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -27,7 +27,7 @@
         tools:layout_editor_absoluteY="45dp" />
 
     <EditText
-        android:id="@+id/editText2"
+        android:id="@+id/etPassword"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -50,5 +50,13 @@
         android:text="Button"
         tools:layout_editor_absoluteY="186dp"
         tools:layout_editor_absoluteX="136dp" />
+
+    <TextView
+        android:id="@+id/registerLink"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="TextView"
+        tools:layout_editor_absoluteX="162dp"
+        tools:layout_editor_absoluteY="290dp" />
 
 </android.support.constraint.ConstraintLayout>
