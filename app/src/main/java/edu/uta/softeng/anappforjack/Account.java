@@ -15,11 +15,13 @@ import android.os.Bundle;
 public class Account extends AppCompatActivity {
 
     String accountName;
+    String accountPassword;
     String accountEmail;
-    java.util.Collection interests;
+    java.util.Collection accountInterests;
 
-    Account(String name, String email) {
+    Account(String name, String password, String email) {
         this.setAccountName(name);
+        this.setAccountPassword(password);
         this.setAccountEmail(email);
 
     }
@@ -28,12 +30,20 @@ public class Account extends AppCompatActivity {
         return this.accountName;
     }
 
+    String getAccountPassword() {
+        return this.accountPassword;
+    }
+
     String getAccountEmail() {
         return this.accountEmail;
     }
 
     void setAccountName(String name) {
         this.accountName = name;
+    }
+
+    void setAccountPassword(String password) {
+        this.accountPassword = password;
     }
 
     void setAccountEmail(String email) {
