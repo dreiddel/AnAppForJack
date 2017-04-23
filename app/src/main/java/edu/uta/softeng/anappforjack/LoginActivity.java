@@ -1,4 +1,5 @@
 package edu.uta.softeng.anappforjack;
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
@@ -16,9 +17,16 @@ public class LoginActivity extends AppCompatActivity {
         final android.widget.EditText etPassword = (android.widget.EditText) findViewById(R.id.etPassword);
         final android.widget.EditText etUsername = (android.widget.EditText) findViewById(R.id.etUsername);
         final android.widget.Button button2 = (Button) findViewById(R.id.button2);
-        final android.widget.TextView registerLink = (TextView)
+        final android.widget.TextView registerLink = (TextView) findViewById(R.id.tvRegisterHere);
 
-        registerLink.SetOnClickListener(new View.OnClickListener()
+        registerLink.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent registerIntent = new Intent (LoginActivity.this, RegisterActivity.class);
+                LoginActivity.this.startActivity(registerIntent);
+
+            }
+        });
 
     }
 }
