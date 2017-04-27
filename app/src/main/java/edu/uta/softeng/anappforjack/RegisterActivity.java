@@ -28,9 +28,10 @@ public class RegisterActivity extends AppCompatActivity {
         registerLink.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                final String email = etemail.getText().toString();
-                final String username = etUsername.getText().toString();
-                final String password = etPassword.getText().toString();
+                final String stremail = etemail.getText().toString();
+                final String strUsername = etUsername.getText().toString();
+                final String strPassword = etPassword.getText().toString();
+                final String strPasswordCheck = etPasswordCheck.getText().toString();
 
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -43,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 RegisterActivity.this.startActivity(intent);
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
-                                builder.setMessage("Register Failed")
+                                builder.setMessage("Registration Failed")
                                         .setNegativeButton("Retry", null)
                                         .create()
                                         .show();
@@ -53,7 +54,7 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                     }
                 };
-                RegisterRequest registerRequest = new RegisterRequest(email, username, password, responseListener);
+                RegisterRequest registerRequest = new RegisterRequest(stremail, strUsername, strPassword, strPasswordCheck, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                 queue.add(registerRequest);
             }
