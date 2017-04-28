@@ -4,7 +4,7 @@ import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.view.View;
 import android.widget.Button;
-import android.widget.TextView;
+import android.widget.EditText;
 import org.json.JSONException;
 import org.json.JSONObject;
 import android.app.AlertDialog;
@@ -19,13 +19,13 @@ public class RegisterActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
 
-        final android.widget.EditText etPasswordCheck = (android.widget.EditText) findViewById(R.id.etPasswordCheck);
-        final android.widget.EditText etPassword = (android.widget.EditText) findViewById(R.id.etPassword);
-        final android.widget.EditText etUsername = (android.widget.EditText) findViewById(R.id.etUsername);
-        final android.widget.EditText etemail = (android.widget.EditText) findViewById(R.id.etemail);
-        final android.widget.Button registerLink = (Button) findViewById(R.id.button);
+        final EditText etemail = (EditText) findViewById(R.id.etemail);
+        final EditText etUsername = (EditText) findViewById(R.id.etUsername);
+        final EditText etPassword = (EditText) findViewById(R.id.etPassword);
+        final EditText etPasswordCheck = (EditText) findViewById(R.id.etPasswordCheck);
+        final Button bRegisterButton = (Button) findViewById(R.id.bRegisterButton);
 
-        registerLink.setOnClickListener(new View.OnClickListener() {
+        bRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
                 final String stremail = etemail.getText().toString();
@@ -44,7 +44,7 @@ public class RegisterActivity extends AppCompatActivity {
                                 RegisterActivity.this.startActivity(intent);
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
-                                builder.setMessage("Registration Failed")
+                                builder.setMessage("Register Failed")
                                         .setNegativeButton("Retry", null)
                                         .create()
                                         .show();
@@ -54,6 +54,7 @@ public class RegisterActivity extends AppCompatActivity {
                         }
                     }
                 };
+
                 RegisterRequest registerRequest = new RegisterRequest(stremail, strUsername, strPassword, strPasswordCheck, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(RegisterActivity.this);
                 queue.add(registerRequest);
