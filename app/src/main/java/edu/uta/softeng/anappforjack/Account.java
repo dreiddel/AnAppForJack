@@ -1,7 +1,11 @@
 package edu.uta.softeng.anappforjack;
 
-import android.support.v7.app.AppCompatActivity;
+import android.content.Intent;
 import android.os.Bundle;
+import android.support.v7.app.AppCompatActivity;
+import android.view.View;
+import android.widget.Button;
+import android.widget.TextView;
 
 /**
  * Project: An App for Jack
@@ -14,45 +18,41 @@ import android.os.Bundle;
  **/
 public class Account extends AppCompatActivity {
 
-    String accountName;
-    String accountPassword;
-    String accountEmail;
-    java.util.Collection accountInterests;
-
-    Account(String name, String password, String email) {
-        this.setAccountName(name);
-        this.setAccountPassword(password);
-        this.setAccountEmail(email);
-
-    }
-
+    /*
     String getAccountName() {
         return this.accountName;
     }
-
     String getAccountPassword() {
         return this.accountPassword;
     }
-
     String getAccountEmail() {
         return this.accountEmail;
     }
-
     void setAccountName(String name) {
         this.accountName = name;
     }
-
     void setAccountPassword(String password) {
         this.accountPassword = password;
     }
-
     void setAccountEmail(String email) {
         this.accountEmail = email;
     }
+    */
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
+
+        /*
+        String accountName;
+        String accountPassword;
+        String accountEmail;
+        java.util.Collection accountInterests;
+
+        this.setAccountName(name);
+        this.setAccountPassword(password);
+        this.setAccountEmail(email);
+        */
     }
 }
