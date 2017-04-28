@@ -4,13 +4,17 @@
     android:id="@+id/drawer_layout"
     android:layout_width="match_parent"
     android:layout_height="match_parent">
+
+
+
     <!-- The main content view -->
     <android.support.constraint.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
         xmlns:app="http://schemas.android.com/apk/res-auto"
         xmlns:tools="http://schemas.android.com/tools"
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="fill_parent"
         tools:context="edu.uta.softeng.anappforjack.MainActivity">
+
 
         <Button
             android:id="@+id/button1"
@@ -83,13 +87,42 @@
             app:layout_constraintTop_toBottomOf="@+id/button5" />
     </android.support.constraint.ConstraintLayout>
     <!-- The navigation drawer -->
-    <ListView android:id="@+id/left_drawer"
-        android:layout_width="240dp"
+    <LinearLayout android:id="@+id/left_drawer"
+        android:orientation="vertical"
+        android:layout_width="160dp"
         android:layout_height="match_parent"
         android:layout_gravity="start"
         android:choiceMode="singleChoice"
         android:divider="@android:color/transparent"
         android:dividerHeight="0dp"
-        android:background="@color/colorPrimaryDark"/>
+        android:background="@color/colorWhite">
+
+        <Button
+            android:id="@+id/button9"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/navigation_profile"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textColor="@color/colorPrimaryDark"/>
+
+        <Button
+            android:id="@+id/button10"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/navigation_interests"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textColor="@color/colorPrimaryDark" />
+
+        <Button
+            android:id="@+id/button11"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/navigation_events"
+            android:gravity="left|center"
+            android:paddingLeft="20dp"
+            android:textColor="@color/colorPrimaryDark" />
+    </LinearLayout>
 </android.support.v4.widget.DrawerLayout>
 
