@@ -17,7 +17,7 @@ public class LoginActivity extends AppCompatActivity {
         final android.widget.EditText etPassword = (android.widget.EditText) findViewById(R.id.etPassword);
         final android.widget.EditText etUsername = (android.widget.EditText) findViewById(R.id.etUsername);
         final android.widget.Button button2 = (Button) findViewById(R.id.button2);
-        final android.widget.TextView registerLink = (TextView) findViewById(R.id.tvRegisterHere);
+        final android.widget.TextView registerLink = (TextView) findViewById(R.id.bRegisterHere);
 
         registerLink.setOnClickListener(new View.OnClickListener() {
             @Override
