@@ -4,4 +4,12 @@
     <color name="colorPrimaryDark">#303F9F</color>
     <color name="colorAccent">#FF4081</color>
     <color name="colorWhite">#FFFFFF</color>
+        <!-- GREY -->
+    <color name="colorGrey0_Gainsboro">#D3D3D3</color>
+    <color name="colorGrey1_Light">#D3D3D3</color>
+    <color name="colorGrey2_Silver">#C0C0C0</color>
+    <color name="colorGrey3_Dark">#A9A9A9</color>
+    <color name="colorGrey4_Grey">#808080</color>
+    <color name="colorGrey5_Dim">#696969</color>
+    <color name="colorGrey6_Charcoal">#464646</color>
 </resources>
