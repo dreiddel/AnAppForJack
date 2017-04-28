@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">AnAppForJack</string>
     <string name="default_person_name">Name</string>
+    <string name="interests">Interests:</string>
 </resources>
