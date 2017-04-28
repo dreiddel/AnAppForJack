@@ -1,3 +1,11 @@
 <resources>
     <string name="app_name">AnAppForJack</string>
+    <string name="default_person_name">Name</string>
+    <string name="interests">Interests:</string>
+
+    <string name="navigation_profile">Profile</string>
+    <string name="navigation_interests">Interests</string>
+    <string name="navigation_events">Events</string>
+    <string name="navigation_login">Login</string>
+    <string name="navigation_register">Register</string>
 </resources>
