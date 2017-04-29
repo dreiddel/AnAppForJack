@@ -15,5 +15,8 @@
     <color name="colorGrey3_Dark">#A9A9A9</color>
     <color name="colorGrey4_Grey">#808080</color>
     <color name="colorGrey5_Dim">#696969</color>
-    <color name="colorGrey6_Charcoal">#464646</color>
+    <color name="colorGrey6">#595959</color>
+    <color name="colorGrey7_Charcoal">#464646</color>
+
+    <color name="colorTransparent">@android:color/transparent</color>
 </resources>

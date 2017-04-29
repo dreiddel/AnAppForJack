@@ -173,15 +173,25 @@
             android:paddingLeft="10dp"
             android:paddingTop="4dp"
             android:textColor="@color/colorGrey0_Gainsboro"
+            android:background="@color/color_state"
             android:text="@string/navigation_profile"
             android:onClick="goToAccount" />
 
-        <ImageView
+        <!-- ImageView
             android:id="@+id/imageView"
             android:layout_width="144dp"
             android:layout_height="4dp"
             android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/line" />
+            app:srcCompat="@drawable/line" /-->
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorGrey7_Charcoal" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorGrey4_Grey" />
 
             <!-- INTERESTS -->
         <TextView
@@ -192,15 +202,18 @@
             android:paddingLeft="10dp"
             android:paddingTop="2dp"
             android:textColor="@color/colorGrey0_Gainsboro"
+            android:background="@color/color_state"
             android:text="@string/navigation_interests"
             android:onClick="" />
 
-        <ImageView
-            android:id="@+id/imageView1"
-            android:layout_width="144dp"
-            android:layout_height="4dp"
-            android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/line" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorGrey7_Charcoal" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorGrey4_Grey" />
 
             <!-- EVENTS -->
         <TextView
@@ -211,15 +224,18 @@
             android:paddingLeft="10dp"
             android:paddingTop="2dp"
             android:textColor="@color/colorGrey0_Gainsboro"
+            android:background="@color/color_state"
             android:text="@string/navigation_events"
             android:onClick=""/>
 
-        <ImageView
-            android:id="@+id/imageView2"
-            android:layout_width="144dp"
-            android:layout_height="4dp"
-            android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/line" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorGrey7_Charcoal" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorGrey4_Grey" />
 
             <!-- LOGIN -->
         <TextView
@@ -230,15 +246,18 @@
             android:paddingLeft="10dp"
             android:paddingTop="2dp"
             android:textColor="@color/colorGrey0_Gainsboro"
+            android:background="@color/color_state"
             android:text="@string/navigation_login"
             android:onClick="goToLogin" />
 
-        <ImageView
-            android:id="@+id/imageView3"
-            android:layout_width="144dp"
-            android:layout_height="4dp"
-            android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/line" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorGrey7_Charcoal" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorGrey4_Grey" />
 
         <!-- REGISTER -->
         <TextView
@@ -249,15 +268,18 @@
             android:paddingLeft="10dp"
             android:paddingTop="2dp"
             android:textColor="@color/colorGrey0_Gainsboro"
+            android:background="@color/color_state"
             android:text="@string/navigation_register"
             android:onClick="goToRegister" />
 
-        <ImageView
-            android:id="@+id/imageView4"
-            android:layout_width="144dp"
-            android:layout_height="4dp"
-            android:layout_gravity="center_horizontal"
-            app:srcCompat="@drawable/line" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorGrey7_Charcoal" />
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:background="@color/colorGrey4_Grey" />
 
     </LinearLayout>
 </android.support.v4.widget.DrawerLayout>
