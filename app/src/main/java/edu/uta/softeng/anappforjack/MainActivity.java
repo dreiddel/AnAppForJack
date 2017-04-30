@@ -2,6 +2,7 @@ package edu.uta.softeng.anappforjack;
 
 import android.content.Intent;
 import android.graphics.Color;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
 import android.support.v7.widget.Toolbar;
@@ -60,6 +61,8 @@ public class MainActivity extends AppCompatActivity {
     }
 
     protected void goToAccount(View view){
+        DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerLayout.closeDrawers();
         Intent intent = new Intent (this, Account.class);
         startActivity(intent);
     }

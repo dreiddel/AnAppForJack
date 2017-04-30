@@ -172,6 +172,7 @@
             android:textSize="32dp"
             android:paddingLeft="10dp"
             android:paddingTop="4dp"
+            android:paddingBottom="4dp"
             android:textColor="@color/colorGrey0_Gainsboro"
             android:background="@color/color_state"
             android:text="@string/navigation_profile"
@@ -190,7 +191,7 @@
             android:background="@color/colorGrey7_Charcoal" />
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1.5dp"
             android:background="@color/colorGrey4_Grey" />
 
             <!-- INTERESTS -->
@@ -201,6 +202,7 @@
             android:textSize="32dp"
             android:paddingLeft="10dp"
             android:paddingTop="2dp"
+            android:paddingBottom="4dp"
             android:textColor="@color/colorGrey0_Gainsboro"
             android:background="@color/color_state"
             android:text="@string/navigation_interests"
@@ -212,7 +214,7 @@
             android:background="@color/colorGrey7_Charcoal" />
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1.5dp"
             android:background="@color/colorGrey4_Grey" />
 
             <!-- EVENTS -->
@@ -223,6 +225,7 @@
             android:textSize="32dp"
             android:paddingLeft="10dp"
             android:paddingTop="2dp"
+            android:paddingBottom="4dp"
             android:textColor="@color/colorGrey0_Gainsboro"
             android:background="@color/color_state"
             android:text="@string/navigation_events"
@@ -234,7 +237,7 @@
             android:background="@color/colorGrey7_Charcoal" />
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1.5dp"
             android:background="@color/colorGrey4_Grey" />
 
             <!-- LOGIN -->
@@ -245,6 +248,7 @@
             android:textSize="32dp"
             android:paddingLeft="10dp"
             android:paddingTop="2dp"
+            android:paddingBottom="4dp"
             android:textColor="@color/colorGrey0_Gainsboro"
             android:background="@color/color_state"
             android:text="@string/navigation_login"
@@ -256,7 +260,7 @@
             android:background="@color/colorGrey7_Charcoal" />
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1.5dp"
             android:background="@color/colorGrey4_Grey" />
 
         <!-- REGISTER -->
@@ -267,6 +271,7 @@
             android:textSize="32dp"
             android:paddingLeft="10dp"
             android:paddingTop="2dp"
+            android:paddingBottom="4dp"
             android:textColor="@color/colorGrey0_Gainsboro"
             android:background="@color/color_state"
             android:text="@string/navigation_register"
@@ -278,9 +283,39 @@
             android:background="@color/colorGrey7_Charcoal" />
         <View
             android:layout_width="match_parent"
-            android:layout_height="2dp"
+            android:layout_height="1.5dp"
             android:background="@color/colorGrey4_Grey" />
 
+        <!-- Bottom LinearLayout -->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:gravity="center|bottom"
+            android:orientation="vertical" >
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/colorGrey7_Charcoal" />
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1.5dp"
+                android:background="@color/colorGrey4_Grey" />
+
+            <TextView
+                android:id="@+id/textView5"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="32dp"
+                android:paddingLeft="10dp"
+                android:paddingTop="2dp"
+                android:paddingBottom="8dp"
+                android:textColor="@color/colorGrey0_Gainsboro"
+                android:background="@color/color_state"
+                android:text="@string/navigation_logout"
+                android:onClick="goToLogin" />
+        </LinearLayout>
     </LinearLayout>
 </android.support.v4.widget.DrawerLayout>
 
