@@ -1,8 +1,11 @@
 package edu.uta.softeng.anappforjack;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
+import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
+import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
 import android.widget.TextView;
@@ -16,7 +19,7 @@ import android.widget.TextView;
  *
  * To Do: Add a list of subscribing clients.
  **/
-public class Account extends AppCompatActivity {
+public class Account extends NavigationAppCompatActivity {
 
     /*
     String getAccountName() {
@@ -38,12 +41,26 @@ public class Account extends AppCompatActivity {
         this.accountEmail = email;
     }
     */
+    // Variables for Toolbar Support
+    //private Toolbar toolbar;
+    //private DrawerLayout drawer;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
 
+        //Add Toolbar and Remove Drawer Scrim
+        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
+        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.setScrimColor(Color.TRANSPARENT);
+
+        // Add Toolbar Support
+        /*toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
+        drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
+        drawer.setScrimColor(Color.TRANSPARENT);*/
         /*
         String accountName;
         String accountPassword;
