@@ -59,13 +59,14 @@ public class LoginActivity extends NavigationAppCompatActivity {
                             boolean success = jsonResponse.getBoolean("success");
 
                             if (success) {
-                                String name = jsonResponse.getString("name");
-                                int age = jsonResponse.getInt("age");
+                                String email = jsonResponse.getString("email");
+                                String username = jsonResponse.getString("username");
+                                String passwordcheck =jsonResponse.getString("passwordcheck");
 
                                 Intent intent = new Intent(LoginActivity.this, UserAreaActivity.class);
-                                intent.putExtra("name", name);
-                                intent.putExtra("age", age);
+                                intent.putExtra("email", email);
                                 intent.putExtra("username", username);
+                                intent.putExtra("passwordcheck", passwordcheck);
                                 LoginActivity.this.startActivity(intent);
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);

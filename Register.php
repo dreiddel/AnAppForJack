@@ -5,6 +5,8 @@
     $username = $_POST["username"];
     $password = $_POST["password"];
     $passwordcheck = $_POST["passwordcheck"];
+
+    mysql->select_db("appJack");
     $statement = mysqli_prepare($con, "INSERT INTO user (email, username, password, passwordcheck) VALUES (?, ?, ?, ?)");
     mysqli_stmt_bind_param($statement, "ssss", $email, $username, $password, $passwordcheck);
     mysqli_stmt_execute($statement);

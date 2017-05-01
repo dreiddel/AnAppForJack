@@ -7,7 +7,7 @@ import java.util.HashMap;
 import java.util.Map;
 
 public class RegisterRequest extends StringRequest {
-    private static final String REGISTER_REQUEST_URL = "http://tonikamitv.hostei.com/Register.php";
+    private static final String REGISTER_REQUEST_URL = "http://anappforjack.000webhostapp.com/Register.php";
     private Map<String, String> params;
 
     public RegisterRequest(String stremail, String strUsername, String strPassword, String strPasswordCheck, Response.Listener<String> listener) {
