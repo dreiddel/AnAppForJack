@@ -62,12 +62,10 @@ public class LoginActivity extends NavigationAppCompatActivity {
                             boolean success = jsonResponse.getBoolean("success");
 
                             if (success) {
-                                String email = jsonResponse.getString("email");
                                 String username = jsonResponse.getString("username");
 
 
-                                Intent intent = new Intent(LoginActivity.this, UserAreaActivity.class);
-                                intent.putExtra("email", email);
+                                Intent intent = new Intent(LoginActivity.this, Account.class);
                                 intent.putExtra("username", username);
 
                                 LoginActivity.this.startActivity(intent);

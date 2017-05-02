@@ -8,6 +8,7 @@ import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.view.View;
 import android.widget.Button;
+import android.widget.EditText;
 import android.widget.TextView;
 
 /**
@@ -50,11 +51,26 @@ public class Account extends NavigationAppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
 
+        Intent intent = getIntent();
+        String username = intent.getStringExtra("username");
+
+        EditText editText = (EditText) findViewById(R.id.editText);
+
+        editText.setText(username);
+
         //Add Toolbar and Remove Drawer Scrim
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.setScrimColor(Color.TRANSPARENT);
+        final Button eventButton = (Button) findViewById(R.id.eventButton);
+        eventButton.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Intent eventIntent = new Intent(Account.this, EventMakerActivity.class);
+                Account.this.startActivity(eventIntent);
+            }
+        });
     }
     protected void goToEventMaker(View view){
         Intent intent = new Intent (this, EventMakerActivity.class);
@@ -80,5 +96,8 @@ public class Account extends NavigationAppCompatActivity {
         this.setAccountName(name);
         this.setAccountPassword(password);
         this.setAccountEmail(email);
+
         */
+
+
 }
