@@ -28,7 +28,7 @@
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:textColor="@color/colorGrey0_Gainsboro"
+        android:textColor="@color/colorWhite"
         android:background="@color/color_state"
         android:text="@string/navigation_profile"
         android:onClick="goToAccount" />
@@ -58,10 +58,9 @@
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:textColor="@color/colorGrey0_Gainsboro"
+        android:textColor="@color/colorWhite"
         android:background="@color/color_state"
-        android:text="@string/navigation_interests"
-        android:onClick="" />
+        android:text="@string/navigation_interests"/>
 
     <View
         android:layout_width="match_parent"
@@ -81,10 +80,11 @@
         android:paddingLeft="10dp"
         android:paddingTop="10dp"
         android:paddingBottom="10dp"
-        android:textColor="@color/colorGrey0_Gainsboro"
+        android:textColor="@color/colorWhite"
         android:background="@color/color_state"
         android:text="@string/navigation_events"
-        android:onClick=""/>
+        android:onClick="goToEvents"
+        />
 
     <View
         android:layout_width="match_parent"
@@ -96,6 +96,7 @@
         android:background="@color/colorGrey4_Grey" />
 
     <!-- LOGIN -->
+    <!--
     <TextView
         android:id="@+id/textView3"
         android:layout_width="match_parent"
@@ -117,8 +118,33 @@
         android:layout_width="match_parent"
         android:layout_height="1.5dp"
         android:background="@color/colorGrey4_Grey" />
+    -->
+
+    <!-- FRIENDS -->
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/color_state"
+        android:text="@string/navigation_friends" />
+        <!-- android:onClick="goToFriends" -->
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorGrey7_Charcoal" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/colorGrey4_Grey" />
 
     <!-- REGISTER -->
+    <!--
     <TextView
         android:id="@+id/textView4"
         android:layout_width="match_parent"
@@ -131,6 +157,30 @@
         android:background="@color/color_state"
         android:text="@string/navigation_register"
         android:onClick="goToRegister" />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/colorGrey7_Charcoal" />
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1.5dp"
+        android:background="@color/colorGrey4_Grey" />
+    -->
+
+    <!-- MESSAGING -->
+    <TextView
+        android:id="@+id/textView4"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="24sp"
+        android:paddingLeft="10dp"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:textColor="@color/colorWhite"
+        android:background="@color/color_state"
+        android:text="@string/navigation_messaging"/>
+        <!--android:onClick="goToMessaging"-->
 
     <View
         android:layout_width="match_parent"
@@ -166,7 +216,7 @@
             android:paddingLeft="10dp"
             android:paddingTop="10dp"
             android:paddingBottom="10dp"
-            android:textColor="@color/colorGrey0_Gainsboro"
+            android:textColor="@color/colorWhite"
             android:background="@color/color_state"
             android:text="@string/navigation_logout"
             android:onClick="goToLogin" />

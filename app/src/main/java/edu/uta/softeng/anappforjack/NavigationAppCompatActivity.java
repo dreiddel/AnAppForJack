@@ -35,6 +35,7 @@ public class NavigationAppCompatActivity extends AppCompatActivity {
         DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.closeDrawers();
         Intent intent = new Intent (this, LoginActivity.class);
+        intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP);
         startActivity(intent);
     }
 
@@ -65,4 +66,30 @@ public class NavigationAppCompatActivity extends AppCompatActivity {
         Intent intent = new Intent (this, Interest.class);
         startActivity(intent);
     }
+/*
+
+    protected void goToEvents(View view){
+        DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerLayout.closeDrawers();
+        Intent intent = new Intent (this, EventActivity.class);
+        startActivity(intent);
+    }
+*/
+
+    /*
+    protected void goToFriends(View view){
+        DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerLayout.closeDrawers();
+        Intent intent = new Intent (this, Friends.class);
+        startActivity(intent);
+    }
+    */
+    /*
+    protected void goToMessaging(View view){
+        DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        mDrawerLayout.closeDrawers();
+        Intent intent = new Intent (this, Messaging.class);
+        startActivity(intent);
+    }
+    */
 }
