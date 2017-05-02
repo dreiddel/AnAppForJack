@@ -11,6 +11,8 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
+import com.android.volley.Response;
+
 /**
  * Project: An App for Jack
  * Client:  Dr. Bahram Khalili, UTA CSE 3310 Software Engineering
@@ -20,7 +22,8 @@ import android.widget.TextView;
  *
  * To Do: Add a list of subscribing clients.
  **/
-public class Account extends NavigationAppCompatActivity {
+public class SecondPersonAccountActivity extends NavigationAppCompatActivity {
+
 
     /*
     String getAccountName() {
@@ -46,10 +49,12 @@ public class Account extends NavigationAppCompatActivity {
     //private Toolbar toolbar;
     //private DrawerLayout drawer;
 
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_account);
+        setContentView(R.layout.activity_second_pers_account);
 
         Intent intent = getIntent();
         String username = intent.getStringExtra("username");
@@ -63,35 +68,21 @@ public class Account extends NavigationAppCompatActivity {
         setSupportActionBar(toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.setScrimColor(Color.TRANSPARENT);
-        final Button eventButton = (Button) findViewById(R.id.eventButton);
+        final EditText etUsername1 = (EditText) findViewById(R.id.etUsername);
         final Button friendButton = (Button) findViewById(R.id.friendButton);
-        eventButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent eventIntent = new Intent(Account.this, EventMakerActivity.class);
-                Account.this.startActivity(eventIntent);
-            }
-        });
-
         friendButton.setOnClickListener(new View.OnClickListener() {
             @Override
-            public void onClick(View v) {
-                Intent eventIntent = new Intent(Account.this, FriendSearchActivity.class);
-                Account.this.startActivity(eventIntent);
+                public void onClick(View v) {
+                Intent intent = getIntent();
+                String username1 = intent.getStringExtra("username");
+                Intent eventIntent = new Intent(SecondPersonAccountActivity.this, Account.class);
+                eventIntent.putExtra("username", username1);
+                SecondPersonAccountActivity.this.startActivity(eventIntent);
             }
         });
     }
-    protected void goToEventMaker(View view){
-        Intent intent = new Intent (this, EventMakerActivity.class);
-        startActivity(intent);
-    }
 
-    protected void goToMain(View view) {
-        Intent intent = new Intent (this, MainActivity.class);
-        startActivity(intent);
-    }
-
-        // Add Toolbar Support
+    // Add Toolbar Support
         /*toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

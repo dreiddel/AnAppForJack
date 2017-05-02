@@ -20,7 +20,7 @@ import android.widget.TextView;
  *
  * To Do: Add a list of subscribing clients.
  **/
-public class Account extends NavigationAppCompatActivity {
+public class FriendResultsActivity extends NavigationAppCompatActivity {
 
     /*
     String getAccountName() {
@@ -49,47 +49,28 @@ public class Account extends NavigationAppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_account);
+        setContentView(R.layout.activity_friend_results);
 
         Intent intent = getIntent();
-        String username = intent.getStringExtra("username");
+        String username = intent.getStringExtra("interestsearch");
 
         EditText editText = (EditText) findViewById(R.id.editText);
-
-        editText.setText(username);
+        String newusername = "Those that like " + username + ":";
+        editText.setText(newusername);
 
         //Add Toolbar and Remove Drawer Scrim
         Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.setScrimColor(Color.TRANSPARENT);
-        final Button eventButton = (Button) findViewById(R.id.eventButton);
         final Button friendButton = (Button) findViewById(R.id.friendButton);
-        eventButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent eventIntent = new Intent(Account.this, EventMakerActivity.class);
-                Account.this.startActivity(eventIntent);
-            }
-        });
-
         friendButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent eventIntent = new Intent(Account.this, FriendSearchActivity.class);
-                Account.this.startActivity(eventIntent);
+                Intent eventIntent = new Intent(FriendResultsActivity.this, SecondPersonAccountActivity.class);
+                FriendResultsActivity.this.startActivity(eventIntent);
             }
         });
-    }
-    protected void goToEventMaker(View view){
-        Intent intent = new Intent (this, EventMakerActivity.class);
-        startActivity(intent);
-    }
-
-    protected void goToMain(View view) {
-        Intent intent = new Intent (this, MainActivity.class);
-        startActivity(intent);
-    }
 
         // Add Toolbar Support
         /*toolbar = (Toolbar) findViewById(R.id.app_bar);
@@ -107,6 +88,7 @@ public class Account extends NavigationAppCompatActivity {
         this.setAccountEmail(email);
 
         */
+    }
 
 
 }

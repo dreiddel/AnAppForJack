@@ -21,8 +21,12 @@
         <activity android:name=".LoginActivity" />
         <activity android:name=".UserAreaActivity" />
         <activity android:name=".EventMakerActivity" />
+        <activity android:name=".EventActivity" />
         <activity android:name=".RegisterActivity" />
         <activity android:name=".Account" />
+        <activity android:name=".FriendSearchActivity" />
+        <activity android:name=".FriendResultsActivity" />
+        <activity android:name=".SecondPersonAccountActivity" />
         <activity android:name=".SettingsActivity"/>
     </application>
 

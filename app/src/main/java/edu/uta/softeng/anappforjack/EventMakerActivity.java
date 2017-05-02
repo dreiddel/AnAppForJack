@@ -49,7 +49,9 @@ public class EventMakerActivity extends NavigationAppCompatActivity {
                             JSONObject jsonResponse = new JSONObject(response);
                             boolean success = jsonResponse.getBoolean("success");
                             if (success) {
+
                                 Intent intent = new Intent(EventMakerActivity.this, LoginActivity.class);
+
                                 EventMakerActivity.this.startActivity(intent);
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(EventMakerActivity.this);
