@@ -72,7 +72,8 @@
             tools:layout_marginTop="30dp"
             app:layout_constraintLeft_toRightOf="@+id/friendButton"
             android:layout_marginLeft="8dp"
-            android:layout_marginRight="8dp" />
+            android:layout_marginRight="8dp"
+            android:onClick="goToEvents"/>
 
         <Button
             android:id="@+id/messageButton"
