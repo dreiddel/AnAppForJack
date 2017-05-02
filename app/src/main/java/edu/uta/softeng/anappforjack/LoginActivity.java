@@ -36,6 +36,7 @@ public class LoginActivity extends NavigationAppCompatActivity {
         final TextView bRegisterButton = (TextView) findViewById(R.id.bRegisterHere);
         final Button bLogin = (Button) findViewById(R.id.button3);
 
+
         bRegisterButton.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -43,6 +44,8 @@ public class LoginActivity extends NavigationAppCompatActivity {
                 LoginActivity.this.startActivity(registerIntent);
             }
         });
+
+
 
         bLogin.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -59,14 +62,16 @@ public class LoginActivity extends NavigationAppCompatActivity {
                             boolean success = jsonResponse.getBoolean("success");
 
                             if (success) {
-                                String name = jsonResponse.getString("name");
-                                int age = jsonResponse.getInt("age");
+                                String email = jsonResponse.getString("email");
+                                String username = jsonResponse.getString("username");
+
 
                                 Intent intent = new Intent(LoginActivity.this, UserAreaActivity.class);
-                                intent.putExtra("name", name);
-                                intent.putExtra("age", age);
+                                intent.putExtra("email", email);
                                 intent.putExtra("username", username);
+
                                 LoginActivity.this.startActivity(intent);
+
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
                                 builder.setMessage("Login Failed")
@@ -86,5 +91,9 @@ public class LoginActivity extends NavigationAppCompatActivity {
                 queue.add(loginRequest);
             }
         });
+
+
+
+
     }
 }
