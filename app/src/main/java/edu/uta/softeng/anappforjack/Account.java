@@ -55,6 +55,16 @@ public class Account extends NavigationAppCompatActivity {
         setSupportActionBar(toolbar);
         DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
         drawer.setScrimColor(Color.TRANSPARENT);
+    }
+    protected void goToEventMaker(View view){
+        Intent intent = new Intent (this, EventMakerActivity.class);
+        startActivity(intent);
+    }
+
+    protected void goToMain(View view) {
+        Intent intent = new Intent (this, MainActivity.class);
+        startActivity(intent);
+    }
 
         // Add Toolbar Support
         /*toolbar = (Toolbar) findViewById(R.id.app_bar);
@@ -71,5 +81,4 @@ public class Account extends NavigationAppCompatActivity {
         this.setAccountPassword(password);
         this.setAccountEmail(email);
         */
-    }
 }
