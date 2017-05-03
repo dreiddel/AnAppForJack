@@ -41,7 +41,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="8dp"
                 android:textColor="@color/colorWhite"
-                android:background="@color/color_state"
+                android:background="@drawable/color_state"
                 android:text="@string/navigation_profile"
                 android:onClick="goToAccount" />
 
@@ -64,7 +64,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="8dp"
                 android:textColor="@color/colorWhite"
-                android:background="@color/color_state"
+                android:background="@drawable/color_state"
                 android:text="@string/navigation_interests"
                 android:onClick="goToInterests"/>
 
@@ -87,7 +87,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="8dp"
                 android:textColor="@color/colorWhite"
-                android:background="@color/color_state"
+                android:background="@drawable/color_state"
                 android:text="@string/navigation_events"
                 android:onClick="goToEvents"
                 />
@@ -112,7 +112,7 @@
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
                 android:textColor="@color/colorGrey0_Gainsboro"
-                android:background="@color/color_state"
+                android:background="@drawable/color_state"
                 android:text="@string/navigation_login"
                 android:onClick="goToLogin" />
 
@@ -136,7 +136,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="8dp"
                 android:textColor="@color/colorWhite"
-                android:background="@color/color_state"
+                android:background="@drawable/color_state"
                 android:text="@string/navigation_friends"
                 android:onClick="goToFriends"/>
 
@@ -159,7 +159,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="8dp"
                 android:textColor="@color/colorWhite"
-                android:background="@color/color_state"
+                android:background="@drawable/color_state"
                 android:text="@string/navigation_register"
                 android:onClick="goToRegister" />
 
@@ -182,7 +182,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="8dp"
                 android:textColor="@color/colorWhite"
-                android:background="@color/color_state"
+                android:background="@drawable/color_state"
                 android:text="@string/navigation_messaging"
                 android:onClick="goToMessaging"/>
 
@@ -227,7 +227,7 @@
             android:paddingLeft="10dp"
             android:paddingTop="8dp"
             android:textColor="@color/colorWhite"
-            android:background="@color/color_state"
+            android:background="@drawable/color_state"
             android:text="@string/navigation_logout"
             android:onClick="goToLogin" />
     </LinearLayout>
