@@ -73,7 +73,7 @@
             app:layout_constraintLeft_toRightOf="@+id/friendButton"
             android:layout_marginLeft="8dp"
             android:layout_marginRight="8dp"
-            android:onClick="goToEvents"/>
+            android:onClick="navigationGoToEvents"/>
 
         <Button
             android:id="@+id/messageButton"
