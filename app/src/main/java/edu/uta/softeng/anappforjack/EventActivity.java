@@ -12,6 +12,7 @@ public class EventActivity extends NavigationAppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_event);
+        this.addNavigationMenu();
 
         Intent intent = getIntent();
         String name = intent.getStringExtra("event");
