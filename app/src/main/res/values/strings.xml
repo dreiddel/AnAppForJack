@@ -14,4 +14,11 @@
     <string name="back">Back</string>
     <string name="navigation_friends">Friends</string>
     <string name="navigation_messaging">Messaging</string>
+    <string name="login_button">Log In</string>
+    <string name="register_button">Register</string>
+    <string name="password">password</string>
+    <string name="username">username</string>
+    <string name="register_account">Register Account</string>
+    <string name="repeat_password">repeat password</string>
+    <string name="email">email</string>
 </resources>
