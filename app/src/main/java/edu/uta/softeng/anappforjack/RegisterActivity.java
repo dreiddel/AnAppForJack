@@ -21,12 +21,8 @@ public class RegisterActivity extends NavigationAppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_register);
-
         //Add Toolbar and Remove Drawer Scrim
-        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
-        setSupportActionBar(toolbar);
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.setScrimColor(Color.TRANSPARENT);
+        this.addNavigationMenu();
 
         final EditText etemail = (EditText) findViewById(R.id.etemail);
         final EditText etUsername = (EditText) findViewById(R.id.etUsername);

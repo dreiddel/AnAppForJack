@@ -64,10 +64,8 @@ public class SecondPersonAccountActivity extends NavigationAppCompatActivity {
         editText.setText(username);
 
         //Add Toolbar and Remove Drawer Scrim
-        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
-        setSupportActionBar(toolbar);
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.setScrimColor(Color.TRANSPARENT);
+        this.addNavigationMenu();
+
         final EditText etUsername1 = (EditText) findViewById(R.id.etUsername);
         final Button friendButton = (Button) findViewById(R.id.friendButton);
         friendButton.setOnClickListener(new View.OnClickListener() {

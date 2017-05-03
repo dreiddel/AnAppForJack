@@ -50,6 +50,8 @@ public class Account extends NavigationAppCompatActivity {
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_account);
+        //Adds Toolbar and Removes Drawer Menu Scrim
+        this.addNavigationMenu();
 
         Intent intent = getIntent();
         String username = intent.getStringExtra("username");
@@ -58,11 +60,6 @@ public class Account extends NavigationAppCompatActivity {
 
         editText.setText(username);
 
-        //Add Toolbar and Remove Drawer Scrim
-        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
-        setSupportActionBar(toolbar);
-        DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-        drawer.setScrimColor(Color.TRANSPARENT);
         final Button eventButton = (Button) findViewById(R.id.eventButton);
         final Button friendButton = (Button) findViewById(R.id.friendButton);
         eventButton.setOnClickListener(new View.OnClickListener() {
@@ -81,12 +78,12 @@ public class Account extends NavigationAppCompatActivity {
             }
         });
     }
-    protected void goToEventMaker(View view){
+    public void goToEventMaker(View view){
         Intent intent = new Intent (this, EventMakerActivity.class);
         startActivity(intent);
     }
 
-    protected void goToMain(View view) {
+    public void goToMain(View view) {
         Intent intent = new Intent (this, MainActivity.class);
         startActivity(intent);
     }

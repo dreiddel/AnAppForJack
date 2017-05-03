@@ -17,11 +17,8 @@
 <!--
         SET MAIN CLASS IN CORRESPONDING JAVA FILE TO: extends NavigationAppCompatActivity {
 
-        ADD THESE LINES TO THE onCreate() METHOD OF THE CORRESPONDING JAVA FILE:
-            Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
-            setSupportActionBar(toolbar);
-            DrawerLayout drawer = (DrawerLayout) findViewById(R.id.drawer_layout);
-            drawer.setScrimColor(Color.TRANSPARENT);
+        ADD THIS LINE TO THE onCreate() METHOD OF THE CORRESPONDING JAVA FILE:
+            this.addNavigationMenu();
 -->
 
     <!-- The main content view -->
@@ -39,6 +36,8 @@
 
         <!-- Include in first item: app:layout_constraintTop_toBottomOf="@+id/app_bar" -->
 
+
+        <!-- ADD CODE HERE -->
 
 
     </android.support.constraint.ConstraintLayout>
