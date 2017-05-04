@@ -23,12 +23,14 @@ public class FriendList extends NavigationAppCompatActivity {
     }
 
 
-    protected TextView[] generateTextViews(int textViewCount) {
+    protected TextView[][] generateTextViews(int textViewCount) {
 
-        TextView[] textViewArray = new TextView[textViewCount];
+        TextView[][] textViewArray = new TextView[3][textViewCount];
 
         for(int i = 0; i < textViewCount; i++) {
-            textViewArray[i] = new TextView(this);
+            textViewArray[0][i] = (TextView)getLayoutInflater().inflate(R.layout.text_view_style, null);
+            textViewArray[1][i] = (TextView)getLayoutInflater().inflate(R.layout.user_list_divider, null);
+            textViewArray[2][i] = (TextView)getLayoutInflater().inflate(R.layout.user_list_divider_light, null);
         }
 
         return textViewArray;
@@ -40,12 +42,14 @@ public class FriendList extends NavigationAppCompatActivity {
     }*/
 
     protected void setTextViews(int textViewCount, String[] users, LinearLayout ll) {
-        TextView[] textViewArray = generateTextViews(textViewCount);
+        TextView[][] textViewArray = generateTextViews(textViewCount);
+        /*TextView user_list_div = new TextView(this);*/
+        TextView user_list_div = (TextView)getLayoutInflater().inflate(R.layout.user_list_divider, null);
 
         for(int i = 0; i < textViewCount; i++) {
-            textViewArray[i].setText(users[i]);
+            textViewArray[0][i].setText(users[i]);
 
-            textViewArray[i].setTextSize(TypedValue.COMPLEX_UNIT_PX,
+            /*textViewArray[i].setTextSize(TypedValue.COMPLEX_UNIT_PX,
                     getResources().getDimension(R.dimen.user_text_size));
 
             textViewArray[i].setHeight((int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
@@ -56,9 +60,9 @@ public class FriendList extends NavigationAppCompatActivity {
             textViewArray[i].setPadding((int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
                     10, getResources().getDisplayMetrics()),
                     (int)TypedValue.applyDimension(TypedValue.COMPLEX_UNIT_DIP,
-                            8, getResources().getDisplayMetrics()), 0, 0);
-            ll.addView(textViewArray[i]);
-            textViewArray[i].setOnClickListener(new View.OnClickListener() {
+                            8, getResources().getDisplayMetrics()), 0, 0);*/
+            ll.addView(textViewArray[0][i]);
+            textViewArray[0][i].setOnClickListener(new View.OnClickListener() {
 
                 @Override
                 public void onClick(View view) {
@@ -67,6 +71,8 @@ public class FriendList extends NavigationAppCompatActivity {
                     /*Toast.makeText(getApplicationContext(), "ID : "+arg0.getId(), Toast.LENGTH_SHORT).show();*/
                 }
             });
+            ll.addView(textViewArray[1][i]);
+            ll.addView(textViewArray[2][i]);
         }
     }
 }

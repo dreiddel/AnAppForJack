@@ -19,9 +19,9 @@
         <item name="android:scaleType">fitCenter</item>
     </style>
 
-    <style name="user_divider">
+<!--<style name="user_divider">
         <item name="android:height">2dp</item>
-        <item name="android:background">@color/colorGrey4_Grey</item>
+        <item name="android:background">@color/colorGrey2_Silver</item>
     </style>
     <style name="user_text_view">
         <item name="android:textSize">24dp</item>
@@ -29,7 +29,6 @@
         <item name="android:paddingLeft">10dp</item>
         <item name="android:paddingTop">8dp</item>
         <item name="android:background">@drawable/color_state_user_list</item>
-
-    </style>
+    </style>-->
 
 </resources>
