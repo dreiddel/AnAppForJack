@@ -119,14 +119,13 @@ public class NavigationAppCompatActivity extends AppCompatActivity {
         Intent intent = new Intent (this, EventActivity.class);
         startActivity(intent);
     }
-    /*
     public void navigationGoToFriends(View view){
         DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.closeDrawers();
-        Intent intent = new Intent (this, FriendListActivity.class);
+        Intent intent = new Intent (this, FriendList.class);
         startActivity(intent);
     }
-    *//*
+    /*
     public void navigationGoToMessaging(View view){
         DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.closeDrawers();
