@@ -131,7 +131,7 @@ public class NavigationAppCompatActivity extends AppCompatActivity {
             }
         }, 400);
     }
-    public void navigationGoToInterest(View view){
+    public void navigationGoToInterests(View view){
         final DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         final Handler handler = new Handler();
         handler.postDelayed(new Runnable() {
