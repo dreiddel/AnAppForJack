@@ -61,27 +61,43 @@ public class LoginActivity extends NavigationAppCompatActivity {
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
                     public void onResponse(String response) {
-                        try {
-                            JSONObject jsonResponse = new JSONObject(response);
-                            boolean success = jsonResponse.getBoolean("success");
+                        if (username.matches("")) {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                            builder.setMessage("Please enter your username")
+                                    .setNegativeButton("Retry", null)
+                                    .create()
+                                    .show();
+                        }
+                        else if (password.matches("")) {
+                            AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                            builder.setMessage("Please enter your password")
+                                    .setNegativeButton("Retry", null)
+                                    .create()
+                                    .show();
+                        }
+                        else {
+                            try {
+                                JSONObject jsonResponse = new JSONObject(response);
+                                boolean success = jsonResponse.getBoolean("success");
 
-                            if (success) {
-                                String username = jsonResponse.getString("username");
-                                AccountName = jsonResponse.getString("username");
-                                Intent intent = new Intent(LoginActivity.this, Account.class);
-                                intent.putExtra("username", username);
-                                LoginActivity.this.startActivity(intent);
+                                if (success) {
+                                    String username = jsonResponse.getString("username");
+                                    AccountName = jsonResponse.getString("username");
+                                    Intent intent = new Intent(LoginActivity.this, Account.class);
+                                    intent.putExtra("username", username);
+                                    LoginActivity.this.startActivity(intent);
 
-                            } else {
-                                AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                                builder.setMessage("Your username and/or password was not correct")
-                                        .setNegativeButton("Retry", null)
-                                        .create()
-                                        .show();
+                                } else {
+                                    AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
+                                    builder.setMessage("Your username and/or password was not correct")
+                                            .setNegativeButton("Retry", null)
+                                            .create()
+                                            .show();
+                                }
+
+                            } catch (JSONException e) {
+                                e.printStackTrace();
                             }
-
-                        } catch (JSONException e) {
-                            e.printStackTrace();
                         }
                     }
                 };

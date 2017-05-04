@@ -7,7 +7,7 @@ package edu.uta.softeng.anappforjack;
         import android.widget.EditText;
         import android.widget.TextView;
 
-//Unused test page for oringinal registration/login features, code mainly by https://github.com/tonikami with modifications by Julian Ducharme.
+//Unused test page for oringinal registration/login features, code mainly by https://github.com/tonikami with modifications by Julian Ducharme, 100104461.
 
 public class UserAreaActivity extends NavigationAppCompatActivity {
 
