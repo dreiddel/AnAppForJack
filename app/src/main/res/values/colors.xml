@@ -9,14 +9,15 @@
     <color name="image_border_back">#00000000</color>
     <color name="colorWhite">#FFFFFF</color>
         <!-- GREY -->
-    <color name="colorGrey0_Gainsboro">#D3D3D3</color>
-    <color name="colorGrey1_Light">#D3D3D3</color>
-    <color name="colorGrey2_Silver">#C0C0C0</color>
-    <color name="colorGrey3_Dark">#A9A9A9</color>
-    <color name="colorGrey4_Grey">#808080</color>
-    <color name="colorGrey5_Dim">#696969</color>
-    <color name="colorGrey6">#595959</color>
-    <color name="colorGrey7_Charcoal">#464646</color>
+    <color name="colorGrey0">#D3D3D3</color> <!--Gainsboro-->
+    <color name="colorGrey1">#D3D3D3</color> <!--Light-->
+    <color name="colorGrey2">#C0C0C0</color> <!--Silver-->
+    <color name="colorGrey3">#A9A9A9</color> <!--Dark-->
+    <color name="colorGrey4">#808080</color> <!--Grey-->
+    <color name="colorGrey5">#696969</color> <!--Dim-->
+    <color name="colorGrey6">#464646</color> <!--old = #595959-->
+    <color name="colorGrey7">#333333</color> <!--Charcoal, old = #464646-->
+    <color name="colorGrey8">#262626</color>
 
     <color name="colorTransparent">@android:color/transparent</color>
 </resources>
