@@ -150,7 +150,7 @@
                 android:background="@color/colorGrey5" />
 
             <!-- REGISTER -->
-            <TextView
+            <!--<TextView
                 android:id="@+id/textView6"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
@@ -170,7 +170,7 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/colorGrey5" />
+                android:background="@color/colorGrey5" />-->
 
             <!-- MESSAGING -->
             <TextView

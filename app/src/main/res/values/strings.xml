@@ -21,4 +21,8 @@
     <string name="register_account">Register Account</string>
     <string name="repeat_password">repeat password</string>
     <string name="email">email</string>
+    <string name="new_message">New Message</string>
+    <string name="to_col">To:</string>
+    <string name="subject_col">Subject:</string>
+    <string name="send">Send</string>
 </resources>

@@ -23,13 +23,12 @@
 <!--<style name="user_divider">
         <item name="android:height">2dp</item>
         <item name="android:background">@color/colorGrey2</item>
-    </style>
-    <style name="user_text_view">
-        <item name="android:textSize">24dp</item>
-        <item name="android:height">48dp</item>
-        <item name="android:paddingLeft">10dp</item>
-        <item name="android:paddingTop">8dp</item>
-        <item name="android:background">@drawable/color_state_user_list</item>
     </style>-->
+    <style name="large_text_view_style">
+        <item name="android:textSize">48dp</item>
+        <item name="android:height">256dp</item>
+        <item name="android:paddingTop">18dp</item>
+        <item name="android:textColor">@color/colorGrey8</item>
+    </style>
 
 </resources>

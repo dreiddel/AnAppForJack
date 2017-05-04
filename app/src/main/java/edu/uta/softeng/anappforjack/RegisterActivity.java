@@ -18,6 +18,13 @@ import com.android.volley.toolbox.Volley;
 //Class for initial user registration by Julian Ducharme, 1001014461
 
 public class RegisterActivity extends NavigationAppCompatActivity {
+    //Override to Remove Navigation Drawer Functions
+    @Override
+    protected void addNavigationMenu() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
+    }
+
     public String pubUseName;
 
     @Override

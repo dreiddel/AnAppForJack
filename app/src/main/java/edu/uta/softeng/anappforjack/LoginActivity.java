@@ -23,6 +23,13 @@ import org.json.JSONObject;
 //Class for subsequent logins after initial account creation by Julian Ducharme, 1001014461
 
 public class LoginActivity extends NavigationAppCompatActivity {
+    //Override to Remove Navigation Drawer Functions
+    @Override
+    protected void addNavigationMenu() {
+        Toolbar toolbar = (Toolbar) findViewById(R.id.app_bar);
+        setSupportActionBar(toolbar);
+    }
+
     public static String AccountName;
     public static int privID = 1;
 

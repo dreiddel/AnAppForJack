@@ -131,14 +131,17 @@ public class NavigationAppCompatActivity extends AppCompatActivity {
             }
         }, 400);
     }
-    /*
     public void navigationGoToInterest(View view){
-        DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        Intent intent = new Intent (this, Interest.class);
-        startActivity(intent);
-        mDrawerLayout.closeDrawers();
+        final DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        final Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mDrawerLayout.closeDrawer(Gravity.LEFT, true);
+                Toast.makeText(getApplicationContext(), "Sorry, That Page Isn't Available.", Toast.LENGTH_LONG).show();
+            }
+        }, 400);
     }
-    */
     public void navigationGoToEvents(View view){
         final DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         final Intent intent = new Intent (this, EventActivity.class);
@@ -163,13 +166,19 @@ public class NavigationAppCompatActivity extends AppCompatActivity {
             }
         }, 400);
     }
-    /*
     public void navigationGoToMessaging(View view){
-        DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
-        Intent intent = new Intent (this, Messaging.class);
-        startActivity(intent);
-        mDrawerLayout.closeDrawers();
+        final DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
+        final Handler handler = new Handler();
+        final Intent intent = new Intent (this, MessageActivity.class);
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                /*mDrawerLayout.closeDrawer(Gravity.LEFT, true);
+                Toast.makeText(getApplicationContext(), "Sorry, That Page Isn't Available.", Toast.LENGTH_LONG).show();*/
+                startActivity(intent);
+                mDrawerLayout.closeDrawer(Gravity.LEFT, false);
+            }
+        }, 400);
     }
-    */
     // - NAVIGATION FUNCTIONALITY
 }
