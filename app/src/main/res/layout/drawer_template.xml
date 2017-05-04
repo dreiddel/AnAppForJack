@@ -25,11 +25,11 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="0dp"
-                android:background="@color/colorGrey7_Charcoal" />
+                android:background="@color/colorGrey7" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1dp"
-                android:background="@color/colorGrey4_Grey" />
+                android:background="@color/colorGrey5" />
 
             <!-- PROFILE -->
             <TextView
@@ -41,18 +41,18 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="8dp"
                 android:textColor="@color/colorWhite"
-                android:background="@drawable/color_state"
+                android:background="?attr/selectableItemBackground"
                 android:text="@string/navigation_profile"
                 android:onClick="navigationGoToAccount" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@color/colorGrey7_Charcoal" />
+                android:background="@color/colorGrey7" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/colorGrey4_Grey" />
+                android:background="@color/colorGrey5" />
 
             <!-- INTERESTS -->
             <TextView
@@ -64,18 +64,18 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="8dp"
                 android:textColor="@color/colorWhite"
-                android:background="@drawable/color_state"
+                android:background="?attr/selectableItemBackground"
                 android:text="@string/navigation_interests"
                 android:onClick="goToInterests"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@color/colorGrey7_Charcoal" />
+                android:background="@color/colorGrey7" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/colorGrey4_Grey" />
+                android:background="@color/colorGrey5" />
 
             <!-- EVENTS -->
             <TextView
@@ -87,7 +87,7 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="8dp"
                 android:textColor="@color/colorWhite"
-                android:background="@drawable/color_state"
+                android:background="?attr/selectableItemBackground"
                 android:text="@string/navigation_events"
                 android:onClick="navigationGoToEvents"
                 />
@@ -95,11 +95,11 @@
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@color/colorGrey7_Charcoal" />
+                android:background="@color/colorGrey7" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/colorGrey4_Grey" />
+                android:background="@color/colorGrey5" />
 
             <!-- LOGIN -->
             <!--
@@ -111,19 +111,19 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="10dp"
                 android:paddingBottom="10dp"
-                android:textColor="@color/colorGrey0_Gainsboro"
-                android:background="@drawable/color_state"
+                android:textColor="@color/colorGrey0"
+                android:background="?attr/selectableItemBackground"
                 android:text="@string/navigation_login"
                 android:onClick="navigationGoToLogin" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@color/colorGrey7_Charcoal" />
+                android:background="@color/colorGrey7" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/colorGrey4_Grey" />
+                android:background="@color/colorGrey4" />
             -->
 
             <!-- FRIENDS -->
@@ -136,18 +136,18 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="8dp"
                 android:textColor="@color/colorWhite"
-                android:background="@drawable/color_state"
+                android:background="?attr/selectableItemBackground"
                 android:text="@string/navigation_friends"
                 android:onClick="navigationGoToFriends"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@color/colorGrey7_Charcoal" />
+                android:background="@color/colorGrey7" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/colorGrey4_Grey" />
+                android:background="@color/colorGrey5" />
 
             <!-- REGISTER -->
             <TextView
@@ -159,18 +159,18 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="8dp"
                 android:textColor="@color/colorWhite"
-                android:background="@drawable/color_state"
+                android:background="?attr/selectableItemBackground"
                 android:text="@string/navigation_register"
                 android:onClick="navigationGoToRegister" />
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@color/colorGrey7_Charcoal" />
+                android:background="@color/colorGrey7" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/colorGrey4_Grey" />
+                android:background="@color/colorGrey5" />
 
             <!-- MESSAGING -->
             <TextView
@@ -182,18 +182,18 @@
                 android:paddingLeft="10dp"
                 android:paddingTop="8dp"
                 android:textColor="@color/colorWhite"
-                android:background="@drawable/color_state"
+                android:background="?attr/selectableItemBackground"
                 android:text="@string/navigation_messaging"
                 android:onClick="navigationGoToMessaging"/>
 
             <View
                 android:layout_width="match_parent"
                 android:layout_height="2dp"
-                android:background="@color/colorGrey7_Charcoal" />
+                android:background="@color/colorGrey7" />
             <View
                 android:layout_width="match_parent"
                 android:layout_height="1.5dp"
-                android:background="@color/colorGrey4_Grey" />
+                android:background="@color/colorGrey5" />
         </LinearLayout>
     </ScrollView>
     <!-- Bottom LinearLayout -->
@@ -210,12 +210,12 @@
             android:layout_width="match_parent"
             android:layout_height="2dp"
             android:layout_weight="1"
-            android:background="@color/colorGrey7_Charcoal" />
+            android:background="@color/colorGrey7" />
         <View
             android:layout_width="match_parent"
             android:layout_height="1.5dp"
             android:layout_weight="2"
-            android:background="@color/colorGrey4_Grey" />
+            android:background="@color/colorGrey5" />
 
         <TextView
             android:id="@+id/textView5"
@@ -227,7 +227,7 @@
             android:paddingLeft="10dp"
             android:paddingTop="8dp"
             android:textColor="@color/colorWhite"
-            android:background="@drawable/color_state"
+            android:background="?attr/selectableItemBackground"
             android:text="@string/navigation_logout"
             android:onClick="navigationGoToLogin" />
     </LinearLayout>

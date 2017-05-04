@@ -4,8 +4,9 @@
     <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
         <!-- Customize your theme here. -->
         <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
+        <item name="colorPrimaryDark">@color/colorGrey8</item>
         <item name="colorAccent">@color/colorAccent</item>
+        <item name="colorControlHighlight">#80808080</item>
     </style>
 
     <style name="InterestImageView">
@@ -21,7 +22,7 @@
 
 <!--<style name="user_divider">
         <item name="android:height">2dp</item>
-        <item name="android:background">@color/colorGrey2_Silver</item>
+        <item name="android:background">@color/colorGrey2</item>
     </style>
     <style name="user_text_view">
         <item name="android:textSize">24dp</item>

@@ -33,7 +33,7 @@
                 android:id="@+id/friend_list"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:background="@color/colorGrey0_Gainsboro"
+                android:background="@color/colorGrey0"
                 android:orientation="vertical">
 
             </LinearLayout>
