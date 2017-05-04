@@ -27,6 +27,7 @@
         <activity android:name=".FriendSearchActivity" />
         <activity android:name=".FriendResultsActivity" />
         <activity android:name=".SecondPersonAccountActivity" />
+        <activity android:name=".MessageActivity" />
         <activity android:name=".SettingsActivity" />
         <activity android:name=".FriendList"></activity>
     </application>

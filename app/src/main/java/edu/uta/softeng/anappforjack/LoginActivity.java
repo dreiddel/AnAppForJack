@@ -67,11 +67,9 @@ public class LoginActivity extends NavigationAppCompatActivity {
 
                             if (success) {
                                 String username = jsonResponse.getString("username");
-
                                 AccountName = jsonResponse.getString("username");
                                 Intent intent = new Intent(LoginActivity.this, Account.class);
                                 intent.putExtra("username", username);
-
                                 LoginActivity.this.startActivity(intent);
 
                             } else {
