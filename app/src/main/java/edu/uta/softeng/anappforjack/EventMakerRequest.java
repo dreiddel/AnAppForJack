@@ -6,6 +6,8 @@ import com.android.volley.toolbox.StringRequest;
 import java.util.HashMap;
 import java.util.Map;
 
+//Class for linking entered event variables to php file @ anappforjack.000webhostapp.com by Julian Ducharme 1001014461
+
 public class EventMakerRequest extends StringRequest {
     private static final String REGISTER_REQUEST_URL = "http://anappforjack.000webhostapp.com/EventMaker.php";
     private Map<String, String> params;

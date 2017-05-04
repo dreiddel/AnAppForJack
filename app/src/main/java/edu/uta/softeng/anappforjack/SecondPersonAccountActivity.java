@@ -22,7 +22,8 @@ import com.android.volley.Response;
  *
  * To Do: Add a list of subscribing clients.
  **/
-public class SecondPersonAccountActivity extends NavigationAppCompatActivity {
+public class SecondPersonAccountActivity  extends NavigationAppCompatActivity {
+
 
 
     /*
@@ -45,42 +46,44 @@ public class SecondPersonAccountActivity extends NavigationAppCompatActivity {
         this.accountEmail = email;
     }
     */
-    // Variables for Toolbar Support
-    //private Toolbar toolbar;
-    //private DrawerLayout drawer;
+        // Variables for Toolbar Support
+        //private Toolbar toolbar;
+        //private DrawerLayout drawer;
 
+        @Override
+        protected void onCreate (Bundle savedInstanceState){
 
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_second_pers_account);
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_second_pers_account);
+            Intent intent = getIntent();
+            String username = intent.getStringExtra("username");
 
-        Intent intent = getIntent();
-        String username = intent.getStringExtra("username");
+            EditText editText = (EditText) findViewById(R.id.editText);
 
-        EditText editText = (EditText) findViewById(R.id.editText);
+            editText.setText(username);
 
-        editText.setText(username);
+            //Add Toolbar and Remove Drawer Scrim
+            this.addNavigationMenu();
 
-        //Add Toolbar and Remove Drawer Scrim
-        this.addNavigationMenu();
-
-        final EditText etUsername1 = (EditText) findViewById(R.id.etUsername);
-        final Button friendButton = (Button) findViewById(R.id.friendButton);
-        friendButton.setOnClickListener(new View.OnClickListener() {
-            @Override
+            final EditText etUsername1 = (EditText) findViewById(R.id.etUsername);
+            final Button friendButton = (Button) findViewById(R.id.friendButton);
+            friendButton.setOnClickListener(new View.OnClickListener() {
+                @Override
                 public void onClick(View v) {
-                Intent intent = getIntent();
-                String username1 = intent.getStringExtra("username");
-                Intent eventIntent = new Intent(SecondPersonAccountActivity.this, Account.class);
-                eventIntent.putExtra("username", username1);
-                SecondPersonAccountActivity.this.startActivity(eventIntent);
-            }
-        });
-    }
+                    RegisterActivity reg = new RegisterActivity();{
+                        String thename = reg.pubUseName;
+                        Intent intent = getIntent();
+                        Intent eventIntent = new Intent(SecondPersonAccountActivity.this, Account.class);
+                        eventIntent.putExtra("username", thename);
+                        SecondPersonAccountActivity.this.startActivity(eventIntent);
+                    }
 
-    // Add Toolbar Support
+                }
+            });
+        }
+
+        // Add Toolbar Support
         /*toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

@@ -22,6 +22,8 @@ import android.widget.TextView;
  **/
 public class Account extends NavigationAppCompatActivity {
 
+
+
     /*
     String getAccountName() {
         return this.accountName;
@@ -42,53 +44,61 @@ public class Account extends NavigationAppCompatActivity {
         this.accountEmail = email;
     }
     */
-    // Variables for Toolbar Support
-    //private Toolbar toolbar;
-    //private DrawerLayout drawer;
+        // Variables for Toolbar Support
+        //private Toolbar toolbar;
+        //private DrawerLayout drawer;
 
-    @Override
-    protected void onCreate(Bundle savedInstanceState) {
-        super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_account);
-        //Adds Toolbar and Removes Drawer Menu Scrim
-        this.addNavigationMenu();
+        @Override
+        protected void onCreate (Bundle savedInstanceState){
+            super.onCreate(savedInstanceState);
+            setContentView(R.layout.activity_account);
+            //Adds Toolbar and Removes Drawer Menu Scrim
+            this.addNavigationMenu();
+            Intent intent = getIntent();
+            String username = LoginActivity.AccountName;
+            EditText editText = (EditText) findViewById(R.id.editText);
 
-        Intent intent = getIntent();
-        String username = intent.getStringExtra("username");
+            editText.setText(username);
+            TextView[] friendlist = new TextView[10];
 
-        EditText editText = (EditText) findViewById(R.id.editText);
+            final Button eventButton = (Button) findViewById(R.id.eventButton);
+            final Button friendButton = (Button) findViewById(R.id.friendButton);
+            final Button messageButton = (Button) findViewById(R.id.messageButton);
+            eventButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent eventIntent = new Intent(Account.this, EventActivity.class);
+                    Account.this.startActivity(eventIntent);
+                }
+            });
 
-        editText.setText(username);
+            friendButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent eventIntent = new Intent(Account.this, FriendSearchActivity.class);
+                    Account.this.startActivity(eventIntent);
+                }
+            });
+            messageButton.setOnClickListener(new View.OnClickListener() {
+                @Override
+                public void onClick(View v) {
+                    Intent eventIntent = new Intent(Account.this, MessageActivity.class);
+                    Account.this.startActivity(eventIntent);
+                }
+            });
+        }
 
-        final Button eventButton = (Button) findViewById(R.id.eventButton);
-        final Button friendButton = (Button) findViewById(R.id.friendButton);
-        eventButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent eventIntent = new Intent(Account.this, EventMakerActivity.class);
-                Account.this.startActivity(eventIntent);
-            }
-        });
-
-        friendButton.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                Intent eventIntent = new Intent(Account.this, FriendSearchActivity.class);
-                Account.this.startActivity(eventIntent);
-            }
-        });
-    }
-    public void goToEventMaker(View view){
-        Intent intent = new Intent (this, EventMakerActivity.class);
+    public void goToEventMaker(View view) {
+        Intent intent = new Intent(this, EventMakerActivity.class);
         startActivity(intent);
     }
 
     public void goToMain(View view) {
-        Intent intent = new Intent (this, MainActivity.class);
+        Intent intent = new Intent(this, MainActivity.class);
         startActivity(intent);
     }
 
-        // Add Toolbar Support
+    // Add Toolbar Support
         /*toolbar = (Toolbar) findViewById(R.id.app_bar);
         setSupportActionBar(toolbar);
         drawer = (DrawerLayout) findViewById(R.id.drawer_layout);

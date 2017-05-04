@@ -15,7 +15,10 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 
+//Class for initial user registration by Julian Ducharme, 1001014461
+
 public class RegisterActivity extends NavigationAppCompatActivity {
+    public String pubUseName;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -23,7 +26,6 @@ public class RegisterActivity extends NavigationAppCompatActivity {
         setContentView(R.layout.activity_register);
         //Add Toolbar and Remove Drawer Scrim
         this.addNavigationMenu();
-
         final EditText etemail = (EditText) findViewById(R.id.etemail);
         final EditText etUsername = (EditText) findViewById(R.id.etUsername);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
@@ -35,6 +37,7 @@ public class RegisterActivity extends NavigationAppCompatActivity {
             public void onClick(View v) {
                 final String stremail = etemail.getText().toString();
                 final String strUsername = etUsername.getText().toString();
+                pubUseName = etUsername.getText().toString();
                 final String strPassword = etPassword.getText().toString();
                 final String strPasswordCheck = etPasswordCheck.getText().toString();
 
@@ -64,7 +67,7 @@ public class RegisterActivity extends NavigationAppCompatActivity {
                                     RegisterActivity.this.startActivity(intent);
                                 } else {
                                     AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
-                                    builder.setMessage("Registration Failed")
+                                    builder.setMessage("Failed to Register")
                                             .setNegativeButton("Retry", null)
                                             .create()
                                             .show();
@@ -75,7 +78,7 @@ public class RegisterActivity extends NavigationAppCompatActivity {
 
                         } else {
                             AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
-                            builder.setMessage("Passwords do not match")
+                            builder.setMessage("Your given passwords do not match")
                                     .setNegativeButton("Retry", null)
                                     .create()
                                     .show();

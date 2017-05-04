@@ -4,6 +4,7 @@ import android.app.AlertDialog;
 import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
+import android.support.annotation.IdRes;
 import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
@@ -19,9 +20,13 @@ import com.android.volley.toolbox.Volley;
 import org.json.JSONException;
 import org.json.JSONObject;
 
-
+//Class for subsequent logins after initial account creation by Julian Ducharme, 1001014461
 
 public class LoginActivity extends NavigationAppCompatActivity {
+    public static String AccountName;
+    public static int privID = 1;
+
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -31,8 +36,8 @@ public class LoginActivity extends NavigationAppCompatActivity {
 
         final EditText etUsername = (EditText) findViewById(R.id.etUsername);
         final EditText etPassword = (EditText) findViewById(R.id.etPassword);
-        final TextView bRegisterButton = (TextView) findViewById(R.id.bRegisterHere);
-        final Button bLogin = (Button) findViewById(R.id.button3);
+        final TextView bRegisterButton = (TextView) findViewById(R.id.bRegisterLinkButton);
+        final Button bLogin = (Button) findViewById(R.id.bLoginButton);
 
 
         bRegisterButton.setOnClickListener(new View.OnClickListener() {
@@ -51,6 +56,7 @@ public class LoginActivity extends NavigationAppCompatActivity {
                 final String username = etUsername.getText().toString();
                 final String password = etPassword.getText().toString();
 
+
                 // Response received from the server
                 Response.Listener<String> responseListener = new Response.Listener<String>() {
                     @Override
@@ -62,7 +68,7 @@ public class LoginActivity extends NavigationAppCompatActivity {
                             if (success) {
                                 String username = jsonResponse.getString("username");
 
-
+                                AccountName = jsonResponse.getString("username");
                                 Intent intent = new Intent(LoginActivity.this, Account.class);
                                 intent.putExtra("username", username);
 
@@ -70,7 +76,7 @@ public class LoginActivity extends NavigationAppCompatActivity {
 
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(LoginActivity.this);
-                                builder.setMessage("Login Failed")
+                                builder.setMessage("Your username and/or password was not correct")
                                         .setNegativeButton("Retry", null)
                                         .create()
                                         .show();
@@ -82,6 +88,7 @@ public class LoginActivity extends NavigationAppCompatActivity {
                     }
                 };
 
+
                 LoginRequest loginRequest = new LoginRequest(username, password, responseListener);
                 RequestQueue queue = Volley.newRequestQueue(LoginActivity.this);
                 queue.add(loginRequest);
@@ -92,4 +99,5 @@ public class LoginActivity extends NavigationAppCompatActivity {
 
 
     }
+
 }

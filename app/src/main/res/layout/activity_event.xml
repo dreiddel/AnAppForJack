@@ -36,7 +36,7 @@
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
-            android:id="@+id/etUsername"
+            android:id="@+id/etEvent"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -52,12 +52,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/etUsername"
+            android:layout_below="@+id/etEvent"
             android:text="Where"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
-            android:id="@+id/etemail"
+            android:id="@+id/etLocation"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -71,12 +71,12 @@
             android:layout_height="wrap_content"
             android:layout_alignParentLeft="true"
             android:layout_alignParentStart="true"
-            android:layout_below="@+id/etemail"
+            android:layout_below="@+id/etLocation"
             android:text="Where"
             android:textAppearance="?android:attr/textAppearanceMedium" />
 
         <EditText
-            android:id="@+id/etPlace"
+            android:id="@+id/etTime"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_alignParentEnd="true"
@@ -85,6 +85,12 @@
             android:layout_alignParentStart="true"
             android:layout_below="@+id/textView3" />
 
+        <Button
+            android:id="@+id/bNewEvent"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text= "New Event"
+            android:layout_below="@+id/etTime"/>
 
 
         <Button
@@ -92,7 +98,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:text= "back"
-            android:layout_below="@+id/etPlace"/>
+            android:layout_below="@+id/bNewEvent"/>
 
 
     </RelativeLayout>

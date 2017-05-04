@@ -15,7 +15,12 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 
+//Class for allowing user to create various events by Julian Ducharme, 1001014461
+
 public class EventMakerActivity extends NavigationAppCompatActivity {
+    public static String pubEventName;
+    public static String pubEventLocation;
+    public static String pubEventTime;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -50,12 +55,17 @@ public class EventMakerActivity extends NavigationAppCompatActivity {
                             boolean success = jsonResponse.getBoolean("success");
                             if (success) {
 
-                                Intent intent = new Intent(EventMakerActivity.this, LoginActivity.class);
+
+                                pubEventName = jsonResponse.getString("eventName");
+                                pubEventLocation = jsonResponse.getString("eventLocation");
+                                pubEventTime = jsonResponse.getString("eventTime");
+
+                                Intent intent = new Intent(EventMakerActivity.this, EventActivity.class);
 
                                 EventMakerActivity.this.startActivity(intent);
                             } else {
                                 AlertDialog.Builder builder = new AlertDialog.Builder(EventMakerActivity.this);
-                                builder.setMessage("Registration Failed")
+                                builder.setMessage("Unable to create event")
                                         .setNegativeButton("Retry", null)
                                         .create()
                                         .show();

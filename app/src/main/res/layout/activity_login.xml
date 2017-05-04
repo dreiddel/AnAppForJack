@@ -52,7 +52,7 @@
 
 
     <Button
-        android:id="@+id/bRegisterHere"
+        android:id="@+id/bRegisterLinkButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="I aint got no Gs yet"
@@ -63,7 +63,7 @@
         app:layout_constraintVertical_bias="0.898" />
 
     <Button
-        android:id="@+id/button3"
+        android:id="@+id/bLoginButton"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="Take me to mah Gs"
