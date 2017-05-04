@@ -20,7 +20,7 @@ public class EventActivity extends NavigationAppCompatActivity {
         String strLocation = EventMakerActivity.pubEventLocation;
         String strTime = EventMakerActivity.pubEventTime;
 
-        TextView tvHeaderMsg = (TextView) findViewById(R.id.tvWelcomeMsg);
+        TextView tvHeaderMsg = (TextView) findViewById(R.id.tvHeaderMsg);
         EditText etUsername = (EditText) findViewById(R.id.etEvent);
         EditText etemail = (EditText) findViewById(R.id.etLocation);
         EditText etTime = (EditText) findViewById(R.id.etTime);

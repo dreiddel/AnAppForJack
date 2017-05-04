@@ -15,6 +15,8 @@ import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.toolbox.Volley;
 
+//Class to search for friend's based on user's interest by Julian Ducharme, 1001014461
+
 public class FriendSearchActivity extends NavigationAppCompatActivity {
 
     @Override

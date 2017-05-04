@@ -53,7 +53,7 @@ public class RegisterActivity extends NavigationAppCompatActivity {
                     public void onResponse(String response) {
                         if (stremail.matches("")) {
                             AlertDialog.Builder builder = new AlertDialog.Builder(RegisterActivity.this);
-                            builder.setMessage("Passwords enter an email address")
+                            builder.setMessage("Please enter an email address")
                                     .setNegativeButton("Retry", null)
                                     .create()
                                     .show();

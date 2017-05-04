@@ -13,15 +13,8 @@ import android.widget.TextView;
 
 import com.android.volley.Response;
 
-/**
- * Project: An App for Jack
- * Client:  Dr. Bahram Khalili, UTA CSE 3310 Software Engineering
- *
- * Author: Michael O'Leary
- * Description: Class defining a user account.
- *
- * To Do: Add a list of subscribing clients.
- **/
+//Class intended for displaying pages of other users to primary logged on user. Based on 'Account.java' by Michael O'Leary, modified by Julian Ducharme, 1001014461.
+
 public class SecondPersonAccountActivity  extends NavigationAppCompatActivity {
 
 
@@ -66,14 +59,12 @@ public class SecondPersonAccountActivity  extends NavigationAppCompatActivity {
             //Add Toolbar and Remove Drawer Scrim
             this.addNavigationMenu();
 
-            final EditText etUsername1 = (EditText) findViewById(R.id.etUsername);
             final Button friendButton = (Button) findViewById(R.id.friendButton);
             friendButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
                     RegisterActivity reg = new RegisterActivity();{
                         String thename = reg.pubUseName;
-                        Intent intent = getIntent();
                         Intent eventIntent = new Intent(SecondPersonAccountActivity.this, Account.class);
                         eventIntent.putExtra("username", thename);
                         SecondPersonAccountActivity.this.startActivity(eventIntent);

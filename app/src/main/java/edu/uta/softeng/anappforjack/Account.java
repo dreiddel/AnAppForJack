@@ -67,8 +67,11 @@ public class Account extends NavigationAppCompatActivity {
             eventButton.setOnClickListener(new View.OnClickListener() {
                 @Override
                 public void onClick(View v) {
-                    Intent eventIntent = new Intent(Account.this, EventActivity.class);
-                    Account.this.startActivity(eventIntent);
+
+                        Intent eventIntent2 = new Intent(Account.this, EventMakerActivity.class);
+                        Account.this.startActivity(eventIntent2);
+
+
                 }
             });
 

@@ -8,7 +8,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-//Unused test page for oringinal registration/login features, code mainly by https://github.com/tonikami with modifications by Julian Ducharme.
+//Class for composing messages to send to other users by Julian Ducharme, 1001014461
 
 public class MessageActivity extends NavigationAppCompatActivity {
 

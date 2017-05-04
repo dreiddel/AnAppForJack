@@ -11,7 +11,7 @@ import android.widget.Button;
 import android.widget.EditText;
 import android.widget.TextView;
 
-//Class for displaying
+//Class for displaying results of friends based on interests by Julian Ducharme, 1001014461
 
 public class FriendResultsActivity extends NavigationAppCompatActivity {
 
