@@ -77,7 +77,7 @@ public class NavigationAppCompatActivity extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
     // + NAVIGATION FUNCTIONALITY
-    public void goToLogin(View view){
+    public void navigationGoToLogin(View view){
         DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.closeDrawers();
         Intent intent = new Intent (this, LoginActivity.class);
@@ -85,49 +85,48 @@ public class NavigationAppCompatActivity extends AppCompatActivity {
         startActivity(intent);
     }
 
-    public void goToRegister(View view){
+    public void navigationGoToRegister(View view){
         DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.closeDrawers();
         Intent intent = new Intent (this, RegisterActivity.class);
         startActivity(intent);
     }
 
-    public void goToUserArea(View view){
+    public void navigationGoToUserArea(View view){
         DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.closeDrawers();
         Intent intent = new Intent (this, UserAreaActivity.class);
         startActivity(intent);
     }
 
-    public void goToAccount(View view){
+    public void navigationGoToAccount(View view){
         DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.closeDrawers();
         Intent intent = new Intent (this, Account.class);
         startActivity(intent);
     }
     /*
-    public void goToInterest(View view){
+    public void navigationGoToInterest(View view){
         DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.closeDrawers();
         Intent intent = new Intent (this, Interest.class);
         startActivity(intent);
     }
     */
-    public void goToEvents(View view){
+    public void navigationGoToEvents(View view){
         DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.closeDrawers();
         Intent intent = new Intent (this, EventActivity.class);
         startActivity(intent);
     }
-    /*
-    public void goToFriends(View view){
+    public void navigationGoToFriends(View view){
         DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.closeDrawers();
-        Intent intent = new Intent (this, Friends.class);
+        Intent intent = new Intent (this, FriendList.class);
         startActivity(intent);
     }
-    *//*
-    public void goToMessaging(View view){
+    /*
+    public void navigationGoToMessaging(View view){
         DrawerLayout mDrawerLayout = (DrawerLayout) findViewById(R.id.drawer_layout);
         mDrawerLayout.closeDrawers();
         Intent intent = new Intent (this, Messaging.class);
